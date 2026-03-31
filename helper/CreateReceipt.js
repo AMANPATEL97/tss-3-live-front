@@ -9,6 +9,8 @@ let createOption = (body, user, product)=>{
     console.log("+++++++++++",user)
     console.log("########", product)
     // return;
+
+    
     var options = {
         format: "A3",
         orientation: "portrait",
