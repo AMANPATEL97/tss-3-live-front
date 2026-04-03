@@ -1,3 +1,4 @@
+import express from 'express';
 import pro from '../module/productmodel.js';
 import jwt from 'jsonwebtoken';
 // import { ENC_KEY } from "../config/conn.js";
@@ -66,7 +67,8 @@ let uploadimage=async(req,res)=>{
         if(err){
             console.log(err);
         }else{
-            console.log("********* success",)
+            console.log("********* success")
+           res.send({success:true})
         }
         
     });
