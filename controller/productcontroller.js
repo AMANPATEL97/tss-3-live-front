@@ -1,4 +1,3 @@
-import express from 'express';
 import pro from '../module/productmodel.js';
 import jwt from 'jsonwebtoken';
 // import { ENC_KEY } from "../config/conn.js";
@@ -59,7 +58,7 @@ let deleteAllproduct =async(req,res)=>{
 }
 
 let uploadimage=async(req,res)=>{
-    // console.log(req.files);
+    console.log(req.files);
       let pid=req.params.id;
     let image=req.files.phota;
     await pro.updateMany({_id:pid}, {image : image.name});
@@ -68,7 +67,7 @@ let uploadimage=async(req,res)=>{
             console.log(err);
         }else{
             console.log("********* success")
-           res.send({success:true})
+            res.send({success:true})
         }
         
     });
